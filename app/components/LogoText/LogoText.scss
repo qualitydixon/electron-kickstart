@@ -1,0 +1,14 @@
+.text {
+	transition-delay: 0ms;
+	transition-duration: 700ms;
+	stroke-width: 1;
+	stroke: #333333;
+	fill: transparent;
+	stroke-dasharray: 350;
+	stroke-dashoffset: 350;
+}
+
+.animate {
+	stroke-dasharray: 0;
+	stroke-dashoffset: 0;
+}

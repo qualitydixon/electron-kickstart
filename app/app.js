@@ -1,12 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { App } from 'containers';
 
-class Search extends React.Component {
-	render() {
-		return (
-			<h1>{'Hello World!'}</h1>
-		);
-	}
-}
-
-ReactDOM.render(<Search />, document.getElementById('app'));
+ReactDOM.render(<App />, document.getElementById('app'));

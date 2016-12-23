@@ -1,3 +1,15 @@
 {
-	"presets": ["es2015", "stage-0", "react"]
+	"presets": ["es2015", "stage-0", "react"],
+	"plugins": [
+		"transform-class-properties", ["transform-es2015-classes", [{
+			"loose": true
+		}]],
+		["module-alias", [{
+			"src": "./app/components",
+			"expose": "components"
+		}, {
+			"src": "./app/containers",
+			"expose": "containers"
+		}]]
+	]
 }
