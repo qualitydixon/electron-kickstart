@@ -1,14 +1,18 @@
+$nice-easing: cubic-bezier(.55, 0, .51, 1);
+
 .text {
-	transition-delay: 0ms;
-	transition-duration: 700ms;
+	// transition: fill-opacity 300ms $nice-easing 2000ms;
+	transition: stroke-dashoffset 2000ms $nice-easing, fill-opacity 700ms $nice-easing 1200ms;
+	// transition-duration: 1500ms;
 	stroke-width: 1;
 	stroke: #333333;
-	fill: transparent;
+	fill: #333333;
+	fill-opacity: 0;
 	stroke-dasharray: 350;
 	stroke-dashoffset: 350;
 }
 
 .animate {
-	stroke-dasharray: 0;
 	stroke-dashoffset: 0;
+	fill-opacity: 1;
 }
