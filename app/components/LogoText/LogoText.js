@@ -15,7 +15,7 @@ export default class Logo extends Component {
 		};
 	}
 	componentDidMount() {
-		setTimeout(() => this.animate(), 2000);
+		setTimeout(() => this.animate(), 6000);
 	}
 	animate() {
 		this.setState({
