@@ -1,3 +1,5 @@
+$nice-easing: cubic-bezier(.55, 0, .51, 1);
+
 .cls-1 {
 	fill: '#c02427';
 }
@@ -7,10 +9,23 @@
 }
 
 .poly {
+	transition: stroke-dashoffset 3000ms $nice-easing, fill-opacity 700ms $nice-easing 1200ms;
 	stroke-width: 1;
 	stroke: #333333;
-	fill: #333333;
+	fill: transparent;
 	// fill-opacity: 0;
-	stroke-dasharray: 400;
+	stroke-dasharray: 530;
 	stroke-dashoffset: 650;
+}
+
+.poly2 {
+	transition-delay: 300ms;
+}
+
+.poly3 {
+	transition-delay: 500ms;
+}
+
+.animate_logo {
+	stroke-dashoffset: 0;
 }
