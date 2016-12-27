@@ -1,5 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import cx from 'classnames';
+import { Link } from 'react-router';
 
 require('./About.scss');
 
@@ -26,6 +27,7 @@ export default class About extends Component {
 		return (
 			<div className="about">
 				{'About us'}
+				<Link to="/">{'Go Back'}</Link>
 			</div>
 		);
 	}

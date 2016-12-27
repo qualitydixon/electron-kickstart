@@ -48,7 +48,7 @@ module.exports = {
 				loader: `babel-loader`,
 				exclude: /node_modules/,
 				query: {
-					presets: ['react', 'es2015'],
+					presets: ['react', 'es2015', 'stage0'],
 					plugins: [
 						'transform-class-properties', ['transform-es2015-classes', [{
 							loose: true

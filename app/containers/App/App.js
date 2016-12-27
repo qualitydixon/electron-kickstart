@@ -10,7 +10,6 @@ export default class App extends Component {
 		return (
 			<BrowserRouter>
 				<div>
-					<MatchWithSlide exactly pattern="/" component={Home} />
 					<MatchWithSlide pattern="/about" component={About} />
 					<Miss component={Home}/>
 				</div>
@@ -19,8 +18,10 @@ export default class App extends Component {
 	}
 }
 
-const MatchWithSlide = () => {
+const MatchWithSlide = ({ component: NewComponent, ...rest }) => {
 	const willLeave = () => ({ zIndex: 1, opacity: 0 });
+	console.log(NewComponent);
+	console.log(rest);
 	return (
 		<Match {...rest} children={({ matched, ...props }) => (
 			<TransitionMotion
@@ -31,7 +32,19 @@ const MatchWithSlide = () => {
 					data: props
 				}] : []}
 			>
-				<Component/>
+				{(interpolatedStyles) => {
+					console.log({interpolatedStyles});
+					return (<div>
+						{interpolatedStyles.map(config => (
+							<div
+								key={config.key}
+								style={{ ...styles.fill, ...config.style }}
+							>
+								<NewComponent />
+							</div>
+						))}
+					</div>);
+				}}
 			</TransitionMotion>
 		)}
 		/>
@@ -39,6 +52,18 @@ const MatchWithSlide = () => {
 };
 
 MatchWithSlide.propTypes = {
-	location: PropTypes.object
+	location: PropTypes.object,
+	component: PropTypes.any
 };
+
+const styles = {};
+
+styles.fill = {
+	position: 'absolute',
+	left: 0,
+	right: 0,
+	top: 0,
+	bottom: 0
+};
+
 
