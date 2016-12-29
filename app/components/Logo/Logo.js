@@ -10,11 +10,10 @@ export default class Logo extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			isAnimating: false
+			isAnimating: true
 		};
 	}
 	componentDidMount() {
-		setTimeout(() => this.animate(), 1000);
 	}
 	animate() {
 		this.setState({

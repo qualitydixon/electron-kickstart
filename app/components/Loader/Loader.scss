@@ -1,0 +1,55 @@
+.loader_wrapper {
+	width: 45px;
+	height: 45px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.loader {
+	width: 20px;
+	height: 20px;
+	background-color: #2C3E50;
+	opacity: .5;
+}
+
+.loader3,
+.loader4 {
+	align-self: flex-end;
+}
+
+.loader1,
+.loader2,
+.loader3,
+.loader4 {
+	animation-duration: 3.2s;
+	animation-name: loading;
+	animation-iteration-count: infinite;
+	animation-direction: forwards;
+}
+
+.loader2 {
+	animation-delay: .8s;
+}
+
+.loader3 {
+	animation-delay: 1.6s;
+}
+
+.loader4 {
+	animation-delay: 2.4s;
+}
+
+@keyframes loading {
+	0% {
+		opacity: .5;
+	}
+
+	20% {
+		opacity: 1;
+	}
+	
+	35% {
+		opacity: .5;
+	}
+}
