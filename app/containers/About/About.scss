@@ -1,4 +1,15 @@
 .about {
-	border: 1px solid red;
 	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.about_loader {
+	margin: 0 auto;
+}
+
+.employee {
+	height: 150px;
+	display: flex;
 }

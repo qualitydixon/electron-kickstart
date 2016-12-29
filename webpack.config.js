@@ -34,18 +34,22 @@ module.exports = {
 	output: {
 		path: './dist/built',
 		filename: 'bundle.js',
-		publicPath: 'http://localhost:8080/built/'
+		publicPath: 'http://localhost:3000'
 	},
 
 	devServer: {
-		contentBase: './dist',
+		// contentBase: './dist',
+		filename: 'bundle.js',
+		port: 3000,
+		publicPath: 'http://localhost:3000',
+		quiet: true
 	},
 
 	module: {
 		loaders: [
 			{
 				test: /\.js?$/,
-				loader: `babel-loader`,
+				loader: 'babel-loader',
 				exclude: /node_modules/,
 				query: {
 					presets: ['react', 'es2015'],
@@ -57,7 +61,7 @@ module.exports = {
 				}
 			},
 			{ test: /\.css$/, loader: 'style-loader!css-loader' },
-			{ test: /\.scss$/, loader: 'style-loader!css-loader!sass-loader'}
+			{ test: /\.scss$/, loader: 'style-loader!css-loader!fast-sass-loader'}
 		]
 	},
 

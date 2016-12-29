@@ -13,7 +13,7 @@ export default class About extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			isAnimating: false,
+			isAnimating: true,
 			isLoading: true,
 			friendData: [{
 				name: 'Corban Baxter'
@@ -21,7 +21,7 @@ export default class About extends Component {
 		};
 	}
 	componentDidMount() {
-		setTimeout(() => this.animate(), 6000);
+		// setTimeout(() => this.animate(), 6000);
 		const myInit =
 			{
 				method: 'GET',
@@ -33,7 +33,8 @@ export default class About extends Component {
 				response.json().then((res) => {
 					console.log(res);
 					this.setState({
-						friendData: this.state.friendData.push(res)
+						friendData: this.state.friendData.concat(res),
+						isLoading: false
 					});
 				});
 			});
@@ -47,17 +48,16 @@ export default class About extends Component {
 		const { isLoading, friendData} = this.state;
 		return (
 			<div className="about">
-				{'About us'}
-				<Link to="/">{'Go Back'}</Link>
 				<div className="about_content">
 					{isLoading
-						? <Loader />
+						? <Loader className="about_loader" />
 						: friendData.map((friend, idx) =>
 							<div key={idx} className="employee">
 								{friend.name}
 							</div>
 					)}
 				</div>
+				<Link to="/">{'Go Back'}</Link>
 			</div>
 		);
 	}
