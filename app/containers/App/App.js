@@ -38,7 +38,7 @@ const MatchWithSlide = ({ component: NewComponent, ...rest }) => {
 						{interpolatedStyles.map(config => (
 							<div
 								key={config.key}
-								style={{ ...styles.fill, ...config.style }}
+								style={{ ...config.style }}
 							>
 								<NewComponent />
 							</div>

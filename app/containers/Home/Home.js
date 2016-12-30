@@ -11,7 +11,7 @@ export default class Home extends React.Component {
 			<div className="container">
 				<Logo className="logo" />
 				<LogoText className="logo_text" />
-				<Link to="/about" className="next">{'Next'}<i className="material-icons arrow_icon">arrow_forward</i></Link>
+				<Link to="/about" className="next">{'Next'}<span className="pt-icon-standard pt-icon-arrow-right arrow_icon" /></Link>
 			</div>
 		);
 	}
