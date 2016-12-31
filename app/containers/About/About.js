@@ -66,7 +66,7 @@ export default class About extends Component {
 	componentDidMount() {
 		const { friendData } = this.state;
 		const myHeaders = new Headers();
-		myHeaders.append('Authorization', 'token 87f0b3b1bbe9196a71286c4e5cdd5a04020988b2');
+		myHeaders.append('Authorization', `token ${OAUTH_TOKEN}`); //eslint-disable-line
 		const myInit = {
 			headers: myHeaders
 		};
@@ -112,7 +112,7 @@ export default class About extends Component {
 							</div>
 					)}
 				</div>
-				<Link to="/" className="back"><span className="pt-icon-standard pt-icon-arrow-left arrow_icon" />{'Go Back'}</Link>
+				<Link to="/" className="back"><span className="pt-icon-standard pt-icon-arrow-left arrow_icon arrow_back" />{'Go Back'}</Link>
 			</div>
 		);
 	}

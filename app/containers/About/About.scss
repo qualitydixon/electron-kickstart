@@ -6,8 +6,15 @@
 	position: relative;
 }
 
+.about_content {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
 .about_loader {
 	margin: 0 auto;
+	padding-top: 45vh;
 }
 
 .employee {
@@ -39,6 +46,14 @@
 	text-transform: uppercase;
 	font-weight: bold;
 	letter-spacing: 1px;
-	transform: translate(-50%, 0);
 	margin: 10px auto;
+
+	&:hover {
+		text-decoration: none;
+		color: inherit;
+	}
+}
+
+.arrow_back {
+	margin-right: 5px;
 }

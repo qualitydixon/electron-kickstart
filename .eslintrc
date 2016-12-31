@@ -51,16 +51,5 @@
 		"import/resolve": {
 			"moduleDirectory": ["node_modules", "src"]
 		}
-	},
-	"globals": {
-		"__DEVELOPMENT__": true,
-		"__CLIENT__": true,
-		"__SERVER__": true,
-		"__DISABLE_SSR__": true,
-		"__DEVTOOLS__": true,
-		"__PERFTOOLS__": true,
-		"__LOG_LEVEL__": true,
-		"log": true,
-		"socket": true
 	}
 }

@@ -6,7 +6,7 @@
   "scripts": {
     "start": "electron .",
     "dev": "webpack --progress --colors --watch",
-    "serve": "webpack-dev-server --progress --colors"
+    "serve": "./bin/serve.js && webpack-dev-server --progress --colors"
   },
   "repository": "https://github.com/electron/electron-quick-start",
   "keywords": [
@@ -45,6 +45,7 @@
     "babel-eslint": "7.1.1",
     "babel-plugin-transform-class-properties": "6.19.0",
     "classnames": "2.2.5",
+    "dotenv": "2.0.0",
     "eslint": "3.12.2",
     "immutable": "3.8.1",
     "react": "15.4.1",
