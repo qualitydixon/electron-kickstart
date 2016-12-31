@@ -1,9 +1,7 @@
 .about {
-	min-height: 100%;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	position: relative;
 }
 
 .about_content {
@@ -14,7 +12,7 @@
 
 .about_loader {
 	margin: 0 auto;
-	padding-top: 45vh;
+	margin-top: 45vh;
 }
 
 .employee {
@@ -25,6 +23,7 @@
 .avatar {
 	height: 70px;
 	width: 70px;
+	background-color: #CCCCCC;
 }
 
 .text_wrapper {

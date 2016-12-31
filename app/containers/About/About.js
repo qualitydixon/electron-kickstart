@@ -98,21 +98,19 @@ export default class About extends Component {
 		const { isLoading, friendData} = this.state;
 		return (
 			<div className="about">
-				<div className="about_content">
-					{isLoading
-						? <Loader className="about_loader" />
-						: friendData.valueSeq().map((friend, idx) =>
-							<div key={idx} className="employee pt-card pt-elevation-2 pt-interactive">
-								<img src={friend.avatar} alt={friend.name} className="avatar" />
-								<div className="text_wrapper">
-									<div className="name">{friend.name}</div>
-									{friend.company}
-									<div className="location"><span className="pt-icon-standard pt-icon-map-marker" />{friend.location}</div>
-								</div>
+				{isLoading
+					? <Loader className="about_loader" />
+					: friendData.valueSeq().map((friend, idx) =>
+						<div key={idx} className="employee pt-card pt-elevation-2 pt-interactive">
+							<img src={friend.avatar} alt={friend.name} className="avatar" />
+							<div className="text_wrapper">
+								<div className="name">{friend.name}</div>
+								{friend.company}
+								<div className="location"><span className="pt-icon-standard pt-icon-map-marker" />{friend.location}</div>
 							</div>
-					)}
-				</div>
-				<Link to="/" className="back"><span className="pt-icon-standard pt-icon-arrow-left arrow_icon arrow_back" />{'Go Back'}</Link>
+						</div>
+				)}
+				{!isLoading && <Link to="/" className="back"><span className="pt-icon-standard pt-icon-arrow-left arrow_icon arrow_back" />{'Go Back'}</Link>}
 			</div>
 		);
 	}

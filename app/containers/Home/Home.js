@@ -1,7 +1,6 @@
 import React from 'react';
 import { Logo, LogoText } from 'components';
-import { About } from 'containers';
-import { BrowserRouter, Match, Miss, Link } from 'react-router';
+import { Link } from 'react-router';
 
 require('./Home.scss');
 

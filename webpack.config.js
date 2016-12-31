@@ -1,9 +1,7 @@
 const fs = require('fs');
 
 if (fs.existsSync('./.env')) {
-	console.log('from webpack config');
 	require('dotenv').config({path: './.env'});
-	console.log('webpack process', process.env.OAUTH_TOKEN);
 }
 
 const webpack = require('webpack');

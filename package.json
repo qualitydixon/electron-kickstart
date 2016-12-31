@@ -6,7 +6,7 @@
   "scripts": {
     "start": "electron .",
     "dev": "webpack --progress --colors --watch",
-    "serve": "./bin/serve.js && webpack-dev-server --progress --colors"
+    "serve": "webpack-dev-server --progress --colors"
   },
   "repository": "https://github.com/electron/electron-quick-start",
   "keywords": [

@@ -9,7 +9,8 @@ export default class App extends Component {
 	render() {
 		return (
 			<BrowserRouter>
-				<div>
+				<div className="routes_wrapper">
+					<MatchWithSlide exactly pattern="/" component={Home} />
 					<MatchWithSlide pattern="/about" component={About} />
 					<Miss component={Home}/>
 				</div>
@@ -19,7 +20,7 @@ export default class App extends Component {
 }
 
 const MatchWithSlide = ({ component: NewComponent, ...rest }) => {
-	const willLeave = () => ({ zIndex: 1, opacity: 0 });
+	const willLeave = () => ({ zIndex: 1, opacity: spring(0) });
 	console.log(NewComponent);
 	console.log(rest);
 	return (
@@ -33,7 +34,6 @@ const MatchWithSlide = ({ component: NewComponent, ...rest }) => {
 				}] : []}
 			>
 				{(interpolatedStyles) => {
-					console.log({interpolatedStyles});
 					return (<div>
 						{interpolatedStyles.map(config => (
 							<div
